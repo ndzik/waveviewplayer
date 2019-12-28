@@ -1,0 +1,52 @@
+Das Generieren der SoundWave aus PCM-Daten
+
+* Berechnen der initialen Max-Min-Paare von Chunks fester Größe (256 Samples).
+  * Ermöglicht das Berechnen von 'On-The-Fly' Reduktionen durch diese gecachten Daten.
+
+* Beim Zeichnen auf die Leinwand, müssen wir die Sample-Werte zur WIDTH und HEIGHT skalieren.
+  * Dafür normalisieren wir die Samples und multiplizieren diese mit der LeinwandHöhe
+  * 16-bit Audio besteht aus Samples im Bereich [-32768, 32767] --> Floating-Point-Division mit 32768. Anschließend negieren und 1 addieren um für den negativen Wert zu kompensieren. Zuletzt mit der HÄLFTE der LeinwandHöhe multiplizieren.
+
+
+| Channel0 | Channels1 |
+| 1        | 2         |
+| 3        | 2         |
+| 1        | 2         |
+| 1        | 2         |
+| 1        | 5         |
+| 1        | 2         |
+| 1        | 2         |
+| 1        | 2         |
+| 1        | 7         |
+| 1        | 2         |
+| 1        | 10        |
+| 1        | 2         |
+
+Performance:
+{{{
+* Non-active audiofiles store recent state in wxBitmap via the wxMemoryDC
+class. => No unnecessary calculus done for items that are not in active use.
+
+    wxBitmap bitmap(card.width, card.height, 32);
+    wxMemoryDC mem_dc(bitmap);
+    // draw recent state onto bitmap, store and reuse
+}}}
+{{{
+* Divide rendering of listitem into even more layers and draw ontop of bitmaps!
+}}}
+{{{
+* Increase performance of decoder by multithreading
+}}}
+
+Features:
+* Remove individual items from list
+* Cut name after specific length is reached relative to current draw_width:
+  * make it scroll on active-item
+* Save-button to store current state
+* FFT and alternative display mode to search for specific audiocharacteristics
+
+TODO:
+* Proper programinitialization (splash-screen etc.)
+
+NOTES:
+* gst-plugin-good seems to be enough to make it work on linux

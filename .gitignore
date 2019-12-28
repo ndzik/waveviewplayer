@@ -1,0 +1,10 @@
+Debug/
+obj/
+.vs/
+Release/
+build/
+src/decoderUsage.cpp
+src/wfv
+cscope.out
+tags
+compile_commands.json
