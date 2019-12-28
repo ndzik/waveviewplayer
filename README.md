@@ -1,8 +1,11 @@
-# JR's WaveViewPlayer #
+# WaveViewPlayer #
 
 ![screenshot](res/images/lots_of_tracks.png)*Linux Version v0.1*
 
-JRWVP is a cross-platform mp3/wav audiofile viewer. It is supposed to give
+This is a restart of another WaveViewPlayer-Project I did. It has the same
+codebase as before but some tweaks here and there.
+
+WVP is a cross-platform mp3/wav audiofile viewer. It is supposed to give
 creators and others a visual overview for their audiofiles.
 
 Imagine yourself editing a video and relying on a ton of soundfiles/sfx.
@@ -25,7 +28,7 @@ application for you.
 
 ## Supported Features ##
 
-* **Drag&Drop** to/from JRWVP <-> from folders/to Editingtools
+* **Drag&Drop** to/from WVP <-> from folders/to Editingtools
 * **Zooming** into audiofiles
 * **Adj.Height** of soundwaveforms
 * **Play** audiofiles
@@ -58,5 +61,5 @@ performance enhancements and a little more _style_ to all of it.
 
 ### LICENSE ###
 
-* All JRWVP-Code is released under GNU GPLv3 license
+* All WVP-Code is released under GNU GPLv3 license
 * Other code in this repo released under its respective license
