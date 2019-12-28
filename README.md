@@ -1,6 +1,6 @@
 # WaveViewPlayer #
 
-![screenshot](res/images/lots_of_tracks.png)*Linux Version v0.1*
+![screenshot](res/images/res/pic1.png)*Linux Version v0.5*
 
 This is a restart of another WaveViewPlayer-Project I did. It has the same
 codebase as before but some tweaks here and there.
@@ -58,6 +58,28 @@ performance enhancements and a little more _style_ to all of it.
 ## INSTALLING FOR LINUX ##
 
 * Coming soon...
+
+## BASIC USAGE ##
+
+On each item in the list, different actions can be performed. When hovering over a track with your mouse-cursor, certain extra buttons will appear. Everything can be done with keyboard shortcuts.
+
+As seen in the picture below, each item has its *name*, *height* and current *resolution*.
+The *resolution* is simply how many samples per pixel are used, to draw the waveform.
+Another feature below is the ability to "zoom" into a specific part of the waveform by holding shift and dragging the cursor from left to right.
+![ActionsOnItem](res/images/res/pic3.png)
+
+Doing preceding operation might break the visual representation of the waveform due to the fact that less samples than pixels are available. Fixing this automatically will come in a next patch (:
+If one has the desire to reduce or increase the *resolution* a context-menu can be created by right clicking.
+![MalItem](res/images/res/pic4.png)
+
+![CtxItem](res/images/res/pic5.png)
+
+Different preset resolutions can be used.
+![ResItem](res/images/res/pic6.png)
+
+![GoodItem](res/images/res/pic7.png)
+
+Above steps can be tedious for alot of files, so if you wish to do that for all of your files in the current session the *strip* button can be used. This action will try to recognize if there are any unnecessary zero values in front and at the end of each sound file, zoom into a "more interesting" part and adapt the resolution if necessary.
 
 ### LICENSE ###
 
