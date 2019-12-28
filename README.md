@@ -57,7 +57,22 @@ performance enhancements and a little more _style_ to all of it.
 
 ## INSTALLING FOR LINUX ##
 
-* Coming soon...
+Make sure cmake and ninja are installed. Furthermore wxwidgets, tinyxml2 and mpg123 are needed to build this application. If you are set follow these steps:
+
+Clone the repo
+
+  `git clone https://gitlab.com/NackterZeuS/WaveViewPlayer.git`
+
+Create a build directory and cd into it
+
+  `mkdir bild && cd build`
+
+Let cmake and ninja do their job
+
+  `cmake ../ -GNinja`
+  `ninja`
+
+The final binary will be in the same folder called "WaveViewPlayer". From here on, create a symlink or whatever to make it accessible in your PATH. Get creative.
 
 ## BASIC USAGE ##
 
