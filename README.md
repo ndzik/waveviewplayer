@@ -65,11 +65,12 @@ Clone the repo
 
 Create a build directory and cd into it
 
-  `mkdir bild && cd build`
+  `mkdir build && cd build`
 
 Let cmake and ninja do their job
 
   `cmake ../ -GNinja`
+  
   `ninja`
 
 The final binary will be in the same folder called "WaveViewPlayer". From here on, create a symlink or whatever to make it accessible in your PATH. Get creative.
