@@ -1,0 +1,17 @@
+image: archlinux:latest
+
+stages:
+  - build
+  - test
+
+before_script:
+  - pacman --noconfirm -Syu
+  - pacman --noconfirm -S boost cmake ninja wxgtk3 webkit2gtk tinyxml2 mpg123 git openssh gcc
+
+build_min_code:
+  stage: build
+  script:
+    - mkdir -p build/default
+    - cd build/default
+    - cmake ../../ -GNinja
+    - ninja
